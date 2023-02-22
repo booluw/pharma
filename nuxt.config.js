@@ -1,7 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  loading: "~/components/Loading.vue",
+  loading: '~/components/Loading.vue',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'pharma',
@@ -19,12 +19,9 @@ export default {
   css: [],
   plugins: [],
   components: true,
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
   build: {},
   tailwindcss: {
-    configPath: "~/config/tailwind.js"
-  }
+    configPath: '~/config/tailwind.js',
+  },
 }

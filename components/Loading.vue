@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: "LoadingPage",
+  name: 'LoadingPage',
   data() {
     return {
-      loading: false
+      loading: false,
     }
   },
   methods: {
@@ -16,7 +16,7 @@ export default {
     },
     finish() {
       this.loading = false
-    }
-  }
+    },
+  },
 }
 </script>

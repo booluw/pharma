@@ -33,5 +33,5 @@
   },
   "resolutions": {
     "@nuxt/kit": "3.0.0-rc.13"
-}
+  }
 }
