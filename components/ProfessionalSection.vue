@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-500 text-white py-20 pr-20 md:py-40 md:pr-40 md:flex gap-10">
+  <div class="bg-blue-500 text-white py-20 md:py-40 md:pr-40 md:flex gap-10">
     <div class="md:w-1/2 relative">
       <img src="~/assets/imgs/nurse and black woman.jpg" class="w-full rounded-r-3xl" />
       <img src="~/assets/doddles/yellow-doodle.svg" class="absolute -bottom-10" />
