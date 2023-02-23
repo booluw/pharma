@@ -4,8 +4,8 @@
       <img src="~/assets/doddles/jobs-doodle.svg" class="w-52 absolute -top-40" />
       <h2 class="text-4xl font-semibold mb-5 font-serif">Customers love Atlas</h2>
     </div>
-    <div class="flex gap-10 justify-between w-full pt-16">
-      <div class="w-1/3 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
+    <div class="md:flex gap-10 justify-between w-full pt-16">
+      <div class="md:w-1/3 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
         <p class="">
           I always tell them it’s the breadth of challenges, scale, engineering talent, big goals and the constant drive to achieve them.
         </p>
@@ -15,7 +15,7 @@
         <img src="~/assets/doddles/quote.svg" class="absolute -top-5 -left-5" />
       </div>
       
-      <div class="w-1/3 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
+      <div class="md:w-1/3 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
         <p class="">
           I always tell them it’s the breadth of challenges, scale, engineering talent, big goals and the constant drive to achieve them.
         </p>
@@ -25,7 +25,7 @@
         <img src="~/assets/doddles/quote.svg" class="absolute -top-5 -left-5" />
       </div>
       
-      <div class="w-1/3 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
+      <div class="md:w-1/3 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
         <p class="">
           I always tell them it’s the breadth of challenges, scale, engineering talent, big goals and the constant drive to achieve them.
         </p>
