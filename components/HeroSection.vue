@@ -23,7 +23,7 @@
     <div
       class="py-10 px-5 md:p-0 md:w-1/2 md:h-screen flex flex-col justify-center md:order-1"
     >
-      <h1 class="font-bold text-3xl md:text-5xl relative z-10">
+      <h1 class="font-bold text-3xl md:text-5xl relative z-10 font-serif">
         ATLAS: The Pharmacy<br />
         you can <span class="opacity-90 text-blue-500">trust</span>
         <yellow-stroke

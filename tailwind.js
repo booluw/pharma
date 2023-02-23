@@ -3,7 +3,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
-        // amiko: ['Amiko', 'sans-serif']
+        serif: ['Raleway', 'serif']
       }
     }
   }

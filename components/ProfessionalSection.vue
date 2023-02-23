@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-blue-500 text-white py-20 pr-20 md:flex gap-10">
+  <div class="bg-blue-500 text-white py-20 pr-20 md:py-40 md:pr-40 md:flex gap-10">
     <div class="md:w-1/2 relative">
       <img src="~/assets/imgs/nurse and black woman.jpg" class="w-full rounded-r-3xl" />
       <img src="~/assets/doddles/yellow-doodle.svg" class="absolute -bottom-10" />
     </div>
     <div class="md:w-1/2 p-5 md:p-0 relative mt-5 md:mt-0">
-      <h2 class="text-4xl font-semibold mb-5 font-sans">
+      <h2 class="text-4xl font-semibold mb-5 font-serif">
         Professionals available to help
       </h2>
       <p class="text-lg">
@@ -17,7 +17,7 @@
         the cites of the word in classical literature, discovered the
         undoubtable source.
       </p>
-      <img src="~/assets/doddles/springs.svg" class="absolute -bottom-20 -right-20" />
+      <img src="~/assets/doddles/springs.svg" class="absolute -bottom-20 -right-20 md:-bottom-40 md:-right-40" />
     </div>
   </div>
 </template>

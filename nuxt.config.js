@@ -30,8 +30,7 @@ export default {
     useStylesheet: true,
     families: {
       'Montserrat': true,
-      // 'Cormorant Infant': true,
-      // 'Amiko': true
+      'Raleway': true,
     }
   }
 }
