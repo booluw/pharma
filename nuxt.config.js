@@ -16,12 +16,22 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  css: [],
+  css: ['~/assets/css/fonts.css'],
   plugins: [],
   components: true,
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
   build: {},
   tailwindcss: {
-    configPath: '~/config/tailwind.js',
+    configPath: '~/tailwind.js',
   },
+  googleFonts: {
+    prefetch: true,
+    preconnect: true,
+    useStylesheet: true,
+    families: {
+      'Montserrat': true,
+      // 'Cormorant Infant': true,
+      // 'Amiko': true
+    }
+  }
 }
