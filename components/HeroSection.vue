@@ -36,10 +36,12 @@
       </p>
       <button
         class="font-semibold text-lg md:font-bold md:w-1/3 px-3 py-4 rounded-2xl bg-[#30BEA0] border-2 border-[#30BEA0] text-white opacity-80 hover:opacity-100 hover:-translate-y-[1px] hover:transform hover:shadow-md transition-all"
+        @click="quoteModal = true"
       >
-        Book a call now
+        Get A Quote
       </button>
     </div>
+    <quote-modal v-if="quoteModal" @close="quoteModal = false" />
   </section>
 </template>
 
@@ -49,6 +51,12 @@ export default {
   components: {
     YellowStroke: () => import('~/components/arts/YellowStroke.vue'),
     PurpleStroke: () => import('~/components/arts/PurpleStroke.vue'),
+    QuoteModal: () => import('~/components/QuoteModal.vue'),
+  },
+  data() {
+    return {
+      quoteModal: true
+    }
   },
 }
 </script>
