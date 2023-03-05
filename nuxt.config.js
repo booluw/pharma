@@ -17,7 +17,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   css: ['~/assets/css/fonts.css'],
-  plugins: [],
+  plugins: [{ src: '~/plugins/alert', mode: 'client' }],
   components: true,
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
   build: {},

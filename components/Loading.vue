@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loading" class=""></div>
+  <div v-if="loading" class="">Hello World</div>
 </template>
 
 <script>

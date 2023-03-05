@@ -12,12 +12,13 @@
           </svg>
         </button>
       </div>
-      <form class="my-5">
+      <form ref="form" class="my-5" @submit.prevent="sendEmail()">
         <label class="flex flex-col" for="name">
           <span class="text-sm">Name:</span>
           <input
             id="name"
             v-model="user.name"
+            name="name"
             type="text"
             class="border-b border-green-300 outline-none"
             required
@@ -28,6 +29,7 @@
           <input
             id="email"
             v-model="user.email"
+            name="email"
             type="email"
             class="border-b border-green-300 outline-none"
             required
@@ -38,6 +40,7 @@
           <input
             id="phone"
             v-model="user.phone"
+            name="phone"
             type="tel"
             class="border-b border-green-300 outline-none"
             required
@@ -48,6 +51,7 @@
           <input
             id="medication_name"
             v-model="user.medication_name"
+            name="medication_name"
             type="text"
             class="border-b border-green-300 outline-none"
             required
@@ -59,6 +63,7 @@
             <input
               id="medication_strength"
               v-model="user.medication_strength"
+              name="medication_strength"
               type="number"
               class="border-b border-green-300 outline-none"
               required
@@ -69,6 +74,7 @@
             <input
               id="medication_quality"
               v-model="user.medication_quantity"
+              name="medication_quantity"
               type="number"
               class="border-b border-green-300 outline-none"
               required
@@ -80,12 +86,15 @@
           <textarea
             id="note"
             v-model="user.other_details"
+            name="other_details"
             class="border-b border-green-300 outline-none"
           ></textarea>
         </label>
         <button
           type="submit"
           class="font-semibold text-lg md:font-bold w-full mt-16 md:mt-5 px-3 py-4 rounded-2xl bg-[#30BEA0] border-2 border-[#30BEA0] text-white opacity-80 hover:opacity-100 hover:-translate-y-[1px] hover:transform hover:shadow-md transition-all"
+          :class="{ 'bg-gray-500 cursor-not-allowed' : submitting}"
+          :disabled="submitting"
         >
           Submit
         </button>
@@ -95,6 +104,8 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
   name: "GetAQuoteModal",
   data() {
@@ -107,9 +118,35 @@ export default {
         medication_strength: '',
         medication_quantity: '',
         other_details: ''
-      }
+      },
+      submitting: false
     }
   },
+  methods: {
+    sendEmail () {
+      this.submitting = true
+      emailjs.sendForm('service_5ktdebn', 'template_g00bc8n', this.$refs.form, 'OcUbO9k2E6-CRQxTE')
+      .then((response) => {
+        console.log(response)
+        this.$fire({
+          title: 'Message received',
+          text: 'We will contact you soonest',
+          type: 'success',
+          timer: 3000
+        })
+        this.$emit('close')
+      }).catch((error) => {
+        this.$fire({
+          title: "Couldn't send message",
+          text: 'Please try again',
+          type: 'error',
+          timer: 3000
+        })
+        console.error(error)
+      })
+      this.submitting = false
+    }
+  }
 }
 </script>
 

@@ -27,14 +27,16 @@
       </button>
     </div>
     <vue-horizontal ref="horizontal" class="this" :button="false" @scroll-debounce="onScroll">
-      <div class="flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
-        <p class="">
-          I always tell them it’s the breadth of challenges, scale, engineering talent, big goals and the constant drive to achieve them.
-        </p>
-        <div class="absolute bottom-10 left-14 font-bold opacity-50 font-serif">
-          John Doe
+      <div class="pl-5">
+        <div class="flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
+          <p class="">
+            I always tell them it’s the breadth of challenges, scale, engineering talent, big goals and the constant drive to achieve them.
+          </p>
+          <div class="absolute bottom-10 left-14 font-bold opacity-50 font-serif">
+            John Doe
+          </div>
+          <img src="~/assets/doddles/quote.svg" class="absolute -top-5 -left-5" />
         </div>
-        <img src="~/assets/doddles/quote.svg" class="absolute -top-5 -left-5" />
       </div>
       <div class="mx-8 flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
         <p class="">

@@ -1,19 +1,17 @@
 <template>
-  <main class="bg-gray-500 h-screen">
+  <main class="bg-gray-500">
     <hero-section />
     <professional-section />
     <nurses-section />
+    <news-letter />
   </main>
 </template>
 
 <script>
-import HeroSection from '~/components/HeroSection.vue'
-import NursesSection from '~/components/NursesSection.vue'
-import ProfessionalSection from '~/components/ProfessionalSection.vue'
 export default {
   name: 'IndexPage',
-  components: { HeroSection, ProfessionalSection, NursesSection },
 }
 </script>
 ,
+    AppHeader
     NursesSection
