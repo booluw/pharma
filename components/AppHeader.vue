@@ -10,13 +10,13 @@
     <nav class="">
       <ul class="flex gap-3 justify-between items-center">
         <li>
+          <nuxt-link to="/" class="px-3 text-gray-700 font-semibold">Home</nuxt-link>
+        </li>
+        <li>
           <nuxt-link to="/about-us" class="px-3 text-gray-700 font-semibold">About</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/contact-us" class="px-3 text-gray-700 font-semibold">Contact</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/blog" class="px-3 text-gray-700 font-semibold">Blog</nuxt-link>
         </li>
       </ul>
     </nav>
