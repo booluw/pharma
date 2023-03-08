@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 px-10 py-20 md:pb-40 md:px-40 container">
+  <div class="bg-gray-100 px-10 py-20 md:pb-40 md:px-40">
     <div class="bg-secondary rounded-xl p-5 md:py-24 md:px-32 newsletter">
       <div class="mb-16">
         <h2 class="text-4xl font-semibold mb-2 font-serif text-white">Subscribe to our newsletter</h2>
@@ -31,26 +31,11 @@
 </template>
 
 <script>
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-if (process.client) {
-  gsap.registerPlugin(ScrollTrigger)
-}
-
 export default {
   data() {
     return {
       subscribed: false
     }
-  },
-  mounted () {
-    gsap.from('.newsletter', {
-      scrollTrigger: {
-        trigger: '.container',
-        scrub: 0.7
-      },
-      opacity: 0.5
-    })
   },
   methods: {
     submitEmail () {

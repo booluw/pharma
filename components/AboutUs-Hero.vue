@@ -1,5 +1,5 @@
 <template>
-  <div class="about h-screen bg-gray-600 text-white py-28 px-8 md:flex gap-10 md:items-center md:py-20 md:pl-40 overflow-hidden">
+  <div class="about h-screen bg-green-600 text-white py-28 px-8 md:flex gap-10 md:items-center md:py-20 md:pl-40 overflow-hidden">
     <div class="md:w-1/2">
       <h1 class="font-serif text-4xl font-bold">We are Atlas, the leading Pharmacy in the United States</h1>
       <p class="mt-5 opacity-75">Atlas Pharmacy is a Las Vegas-based pharmacy dedicated to providing excellent customer service, the highest quality products and pharmaceutical care. </p>

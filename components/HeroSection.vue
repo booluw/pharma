@@ -10,7 +10,7 @@
       class="md:w-1/2 h-96 overflow-hidden md:overflow-hidden md:h-screen flex justify-end items-end pb-16 relative md:order-2"
     >
       <div
-        class="absolute -bottom-16 -left-5 md:shadow-none md:top-16 md:left-0 md:z-20 md:bottom-auto my-0 mx-auto bg-emerald-400 rounded-3xl overflow-hidden shadow-md"
+        class="absolute -bottom-16 -left-5 md:shadow-none md:top-24 md:left-0 md:z-20 md:bottom-auto my-0 mx-auto bg-emerald-400 rounded-3xl overflow-hidden shadow-md"
       >
         <img src="@/assets/imgs/Doctor.png" class="w-[250px]" data-slide="inBottom" />
       </div>

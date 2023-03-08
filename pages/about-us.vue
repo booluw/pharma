@@ -21,6 +21,7 @@
         We help patients understand their medications, so that they can make informed decisions about their health, and we strive to build relationships with our customers by providing individualized care and creating a welcoming atmosphere for all.
       </p>
     </section>
+    <services-section />
   </main>
 </template>
 
@@ -33,7 +34,8 @@ if (process.client) {
 
 export default {
   name: "AboutUsPage",
-  mounted () {
+  
+    Servicesmounted () {
     gsap.from('.slideDown', {
       scrollTrigger: {
         trigger: '.section',
