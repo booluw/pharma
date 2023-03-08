@@ -9,13 +9,8 @@
         Professionals available to help
       </h2>
       <p class="text-lg">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through
-        the cites of the word in classical literature, discovered the
-        undoubtable source.
+        We have a team of highly qualified and experienced pharmacists, who are always at your beck and call, ensuring that
+        you recieve utmost attention, care and highly professional service.
       </p>
       <img src="~/assets/doddles/springs.svg" class="absolute -bottom-20 -right-20 md:-bottom-40 md:-right-40" />
     </div>
