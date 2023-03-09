@@ -30,6 +30,11 @@ export default {
       isOpen: false
     }
   },
+  head () {
+    return {
+      title: "Atlas Pharmacy"
+    }
+  },
   mounted () {
     this.weekday()
     this.isSaturdayBusinessHours()
