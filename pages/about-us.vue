@@ -21,6 +21,12 @@
         We help patients understand their medications, so that they can make informed decisions about their health, and we strive to build relationships with our customers by providing individualized care and creating a welcoming atmosphere for all.
       </p>
     </section>
+    <section class="py-10 px-10 md:py-24 md:px-40 bg-gray-200">
+      <h2 class="text-4xl font-serif font-semibold header">Our Mission</h2>
+      <p class="mt-5 slideText">
+        At Atlas Pharmacy, our focus is on your health and well being. We are passionate about our work and committed to understanding the needs of our customers while exceeding their expectations. Our pharmacy services are tailored to meet the individual needs of our patients who come from diverse backgrounds. We also understand that your time is valuable and we strive to provide you with quick but informative service at each visit.
+      </p>
+    </section>
     <services-section />
   </main>
 </template>

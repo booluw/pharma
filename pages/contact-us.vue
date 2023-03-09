@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <section class="py-40 px-5 md:h-screen md:flex md:px-40 md:py-20 items-center bg-green-300">
+    <section class="py-40 px-5 md:h-screen md:flex gap-10 md:pl-40 md:pr-0 md:py-20 items-center bg-green-300">
       <div class="md:w-1/2">
         <h1 class="font-bold text-3xl md:text-5xl relative z-10 font-serif">
           Contact Us!
@@ -9,7 +9,12 @@
           We are available, Mondays through Saturdays from 10AM for an INDIVIDUALIZED HEALTHCARE for you.
         </p>
       </div>
-      <div class="md:w-1/2"></div>
+      <div class="mt-5 md:mt-0 md:w-1/2">
+        <img
+          src="~/assets/imgs/african-american-pharmacist-working-drugstore-hospital-pharmacy-african-healthcare-stethoscope-black-woman-doctor.compressed.jpg"
+          class="w-full h-auto rounded-lg"
+        />
+      </div>
     </section>
     <section class="py-20 px-5 min-h-screen md:flex gap-10 md:pl-40 md:py-20">
       <div class="md:w-1/2">
@@ -45,12 +50,122 @@
         referrerpolicy="no-referrer-when-downgrade"
       />
     </section>
+    <section class="py-20 px-5 min-h-screen md:flex gap-16 md:pl-0 md:pr-40 md:py-20">
+      <div class="mb-5 md:mb-0 md:w-1/2">
+        <img
+          src="~/assets/imgs/two-african-american-pharmacist-working-drugstore-hospital-pharmacy-african-healthcare.compressed.compressed.jpg"
+          class="w-full rounded-lg" />
+      </div>
+      <div class="md:w-1/2">
+        <h1 class="font-bold text-3xl md:text-5xl relative z-10 font-serif">
+          Get in touch!
+        </h1>
+        <p class="">
+          We love to hear from you. Send us your feedback or questions and we will get back
+          to you as soon as possible
+        </p>
+        <form ref="form" class="border rounded-lg p-5 md:p-10 mt-9" @submit.prevent="sendEmail()">
+          <label class="flex flex-col" for="name">
+          <span class="text-sm">Name:</span>
+          <input
+            id="name"
+            v-model="user.name"
+            name="name"
+            type="text"
+            class="border-b border-green-300 outline-none"
+            required
+          />
+          </label>
+          <label class="flex flex-col mt-5" for="email">
+            <span class="text-sm">Email:</span>
+            <input
+              id="email"
+              v-model="user.email"
+              name="email"
+              type="email"
+              class="border-b border-green-300 outline-none"
+              required
+            />
+          </label>
+          <label class="flex flex-col mt-5" for="phone">
+            <span class="text-sm">Phone Number:</span>
+            <input
+              id="phone"
+              v-model="user.phone"
+              name="phone"
+              type="tel"
+              class="border-b border-green-300 outline-none"
+              required
+            />
+          </label>
+          
+          <label class="flex flex-col mt-5" for="note">
+            <span class="text-sm">Note:</span>
+            <textarea
+              id="note"
+              v-model="user.other_details"
+              name="other_details"
+              class="border-b border-green-300 outline-none"
+            ></textarea>
+          </label>
+          <button
+            type="submit"
+            class="font-semibold text-lg md:font-bold w-full mt-16 md:mt-5 px-3 py-4 rounded-2xl bg-[#30BEA0] border-2 border-[#30BEA0] text-white opacity-80 hover:opacity-100 hover:-translate-y-[1px] hover:transform hover:shadow-md transition-all"
+            :class="{ 'bg-gray-500 cursor-not-allowed' : submitting}"
+            :disabled="submitting"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-export default {
+import emailjs from '@emailjs/browser';
 
+export default {
+  data() {
+    return {
+      user: {
+        name: '',
+        email: '',
+        phone: '',
+        note: ''
+      },
+      submitting: false
+    }
+  },
+  methods: {
+    sendEmail () {
+      this.submitting = true
+      emailjs.sendForm('service_5ktdebn', 'message', this.$refs.form, 'OcUbO9k2E6-CRQxTE')
+      .then((response) => {
+        this.$fire({
+          title: 'Message received',
+          text: 'We will contact you soonest',
+          type: 'success',
+          timer: 3000
+        })
+        this.user = {
+          name: '',
+          email: '',
+          phone: '',
+          note: ''
+        }
+      }).catch((error) => {
+        this.$fire({
+          title: "Couldn't send message",
+          text: 'Please try again',
+          type: 'error',
+          timer: 3000
+        })
+        console.error(error)
+      })
+      this.submitting = false
+    }
+  }
 }
 </script>
 
