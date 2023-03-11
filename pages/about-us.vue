@@ -40,36 +40,55 @@ if (process.client) {
 
 export default {
   name: "AboutUsPage",
-  
-    Servicesmounted () {
+  mounted () {
+    gsap.utils.toArray('.header').forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          scrub: i
+        },
+        x: '-50px',
+        opacity: 0.5
+      })
+    })
+    gsap.utils.toArray('.slideText').forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          scrub: i
+        },
+        y: '50px',
+        opacity: 0.5
+      })
+    })
     gsap.from('.slideDown', {
       scrollTrigger: {
-        trigger: '.section',
-        scrub: 0.5
+        trigger: '.slideDown',
+        scrub: 1
       },
       y: '-50px',
-      opacity: 0.7
+      opacity: 1
     })
     gsap.from('.slideInLeft', {
       scrollTrigger: {
-        trigger: '.section',
-        scrub: 0.5
+        trigger: '.slideInLeft',
+        scrub: 1
       },
       x: '-50px',
-      opacity: 0.7
+      opacity: 1
     })
     gsap.from('.slideInRight', {
       scrollTrigger: {
-        trigger: '.section',
-        scrub: 0.5
+        trigger: '.slideInRight',
+        scrub: 1
       },
       x: '50px',
       opacity: 0.7
     })
     gsap.from('.slideUp', {
       scrollTrigger: {
-        trigger: '.section',
-        scrub: 0.5
+        trigger: '.slideUp',
+        scrub: 1
       },
       y: '30px',
       opacity: 0.7

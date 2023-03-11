@@ -2,17 +2,18 @@
   <div class="">
     <section class="py-40 px-5 md:h-screen md:flex gap-10 md:pl-40 md:pr-0 md:py-20 items-center bg-green-300">
       <div class="md:w-1/2">
-        <h1 class="font-bold text-3xl md:text-5xl relative z-10 font-serif">
+        <h1 class="font-bold text-3xl md:text-5xl relative z-10 font-serif" data-gsap="staggered-text">
           Contact Us!
         </h1>
         <p class="text-xl opacity-75 mt-5">
-          We are available, Mondays through Saturdays from 10AM for an INDIVIDUALIZED HEALTHCARE for you.
+          Our Full-service pharmacy is here to serve your needs.
+          We invite you to contact us by phone or email.
         </p>
       </div>
       <div class="mt-5 md:mt-0 md:w-1/2">
         <img
           src="~/assets/imgs/african-american-pharmacist-working-drugstore-hospital-pharmacy-african-healthcare-stethoscope-black-woman-doctor.compressed.jpg"
-          class="w-full h-auto rounded-lg"
+          class="w-full h-auto rounded-lg slideRight"
         />
       </div>
     </section>
@@ -24,10 +25,6 @@
           Las Vagas, NV. 89169<br />
           Opposite Blvd mall
         </p>
-        <div class="mt-5">
-          Mondays to Fridays: 10AM - 6PM<br />
-          Saturdays: 10AM - 2PM
-        </div>
         <div class="mt-10">
           <div class="flex items-center gap-3 text-primary">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -40,10 +37,93 @@
             <span>725-205-4926</span>
           </div>
         </div>
+        <div class="flex gap-5 mt-5">
+          <a
+            href="https://www.yelp.ca/biz/atlas-pharmacy-Maryland-Pkwy"
+            class="p-2 bg-primary rounded-full text-gray-600 hover:bg-red-500 hover:-translate-y-[1px] hover:transform hover:shadow-md transition-all"
+            target="_blank"
+            title="Atlas pharmacy on Yelp"
+          >
+            <img src="~/assets/imgs/yelp.svg" class="w-6" />
+          </a>
+          <a
+            href="https://www.yelp.ca/biz/atlas-pharmacy-Maryland-Pkwy"
+            class="p-2 bg-primary rounded-full text-gray-600 hover:bg-red-700 hover:-translate-y-[1px] hover:transform hover:shadow-md transition-all"
+            target="_blank"
+            title="Atlas pharmacy on Google Plus"
+          >
+            <img src="~/assets/imgs/google-plus.svg" class="w-6" />
+          </a>
+          <a
+            href="https://www.yelp.ca/biz/atlas-pharmacy-Maryland-Pkwy"
+            class="p-2 bg-primary rounded-full text-gray-600 hover:bg-secondary hover:-translate-y-[1px] hover:transform hover:shadow-md transition-all"
+            target="_blank"
+            title="Atlas pharmacy on Facebook"
+          >
+            <img src="~/assets/imgs/facebook.svg" class="w-6" />
+          </a>
+        </div>
+        <h2 class="mt-16 text-2xl font-serif font-semibold header">Hours of operation</h2>
+        <div class="mt-3 md:w-2/3">
+          <div
+            class="time flex justify-between items-center border-b p-3"
+            :class="today ==='Monday' ? 'bg-gray-100' : ''"
+          >
+            Monday
+            <p class="text-gray-500">
+              10:00 AM - 6:00PM
+            </p>
+          </div>
+          <div
+            class="time flex justify-between items-center border-b p-3"
+            :class="today ==='Tuesday' ? 'bg-gray-100' : ''"
+          >
+            Tuesday
+            <p class="text-gray-500">
+              10:00 AM - 6:00PM
+            </p>
+          </div>
+          <div
+            class="time flex justify-between items-center border-b p-3"
+            :class="today ==='Wednesday' ? 'bg-gray-100' : ''"
+          >
+            Wednesday
+            <p class="text-gray-500">
+              10:00 AM - 6:00PM
+            </p>
+          </div>
+          <div
+            class="time flex justify-between items-center border-b p-3"
+            :class="today ==='Thursday' ? 'bg-gray-100' : ''"
+          >
+            Thursday
+            <p class="text-gray-500">
+              10:00 AM - 6:00PM
+            </p>
+          </div>
+          <div
+            class="time flex justify-between items-center border-b p-3"
+            :class="today ==='Friday' ? 'bg-gray-100' : ''"
+          >
+            Friday
+            <p class="text-gray-500">
+              10:00 AM - 6:00PM
+            </p>
+          </div>
+          <div
+            class="time flex justify-between items-center border-b p-3"
+            :class="today ==='Saturday' ? 'bg-gray-100' : ''"
+          >
+            Saturday
+            <p class="text-gray-500">
+              10:00 AM - 2:00PM
+            </p>
+          </div>
+        </div>
       </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.7323040080287!2d-115.13992038521594!3d36.124379013148825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c4f6ed900001%3A0xe9b860bea57d7e5e!2s3585%20S%20Maryland%20Pkwy%20suite%20J%2C%20Las%20Vegas%2C%20NV%2089169%2C%20USA!5e0!3m2!1sen!2sng!4v1678238615853!5m2!1sen!2sng"
-        class="w-full mt-10 mf:mt-0 md:w-1/2 h-auto rounded"
+        class="w-full mt-10 mf:mt-0 md:w-1/2 h-auto rounded slideRight"
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
@@ -54,17 +134,17 @@
       <div class="mb-5 md:mb-0 md:w-1/2">
         <img
           src="~/assets/imgs/two-african-american-pharmacist-working-drugstore-hospital-pharmacy-african-healthcare.compressed.compressed.jpg"
-          class="w-full rounded-lg" />
+          class="w-full rounded-lg slideLeft" />
       </div>
       <div class="md:w-1/2">
-        <h1 class="font-bold text-3xl md:text-5xl relative z-10 font-serif">
+        <h1 class="header font-bold text-3xl md:text-5xl relative z-10 font-serif">
           Get in touch!
         </h1>
         <p class="">
           We love to hear from you. Send us your feedback or questions and we will get back
           to you as soon as possible
         </p>
-        <form ref="form" class="border rounded-lg p-5 md:p-10 mt-9" @submit.prevent="sendEmail()">
+        <form ref="form" class="slideUp border rounded-lg p-5 md:p-10 mt-9" @submit.prevent="sendEmail()">
           <label class="flex flex-col" for="name">
           <span class="text-sm">Name:</span>
           <input
@@ -124,6 +204,14 @@
 
 <script>
 import emailjs from '@emailjs/browser';
+import { format } from 'date-fns'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import SplitType from 'split-type'
+
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 export default {
   data() {
@@ -136,6 +224,72 @@ export default {
       },
       submitting: false
     }
+  },
+  computed: {
+    today () {
+      return format(new Date(), 'EEEE')
+    }
+  },
+  mounted() {
+    gsap.from('.slideUp', {
+      scrollTrigger: {
+        trigger: '.slideUp',
+        scrub: 1
+      },
+      y: '100px'
+    })
+    gsap.from('.slideLeft', {
+      scrollTrigger: {
+        trigger: '.slideLeft',
+        scrub: 1
+      },
+      x: '-100px'
+    })
+    gsap.utils.toArray('.slideRight').forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          scrub: i
+        },
+        x: '50px',
+        opacity: 0.5
+      })
+    })
+    gsap.utils.toArray('.time').forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          scrub: i
+        },
+        x: '-50px',
+        opacity: 0.5
+      })
+    })
+    gsap.utils.toArray('.header').forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          scrub: i
+        },
+        x: '-50px',
+        opacity: 0.5
+      })
+    })
+    const myText = new SplitType('[data-gsap="staggered-text"]', { types: 'chars'})
+    gsap.fromTo(
+    myText.chars,
+      { 
+        y: 0,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.05,
+        duration: 5,
+        ease: 'power4.out',
+      }
+    )
   },
   methods: {
     sendEmail () {

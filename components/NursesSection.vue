@@ -28,7 +28,7 @@
     </div>
     <vue-horizontal ref="horizontal" class="this" :button="false" @scroll-debounce="onScroll">
       <div class="pl-5">
-        <div class="flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
+        <div class="card flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
           <p class="">
             I always tell them it’s the breadth of challenges, scale, engineering talent, big goals and the constant drive to achieve them.
           </p>
@@ -38,7 +38,7 @@
           <img src="~/assets/doddles/quote.svg" class="absolute -top-5 -left-5" />
         </div>
       </div>
-      <div class="mx-8 flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
+      <div class="card mx-8 flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
         <p class="">
           I always tell them it’s the breadth of challenges, scale, engineering talent, big goals and the constant drive to achieve them.
         </p>
@@ -47,7 +47,7 @@
         </div>
         <img src="~/assets/doddles/quote.svg" class="absolute -top-5 -left-5" />
       </div>
-      <div class="flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
+      <div class="card flex-shrink-0 w-72 md:w-80 h-72 rounded-3xl pt-14 pl-14 p-10 bg-gray-200 border border-gray-300 relative">
         <p class="">
           I always tell them it’s the breadth of challenges, scale, engineering talent, big goals and the constant drive to achieve them.
         </p>
@@ -61,7 +61,12 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import VueHorizontal from 'vue-horizontal';
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 export default {
   components: { VueHorizontal },
@@ -70,6 +75,18 @@ export default {
       hasPrev: false,
       hasNext: true,
     }
+  },
+  mounted () {
+    gsap.utils.toArray('.card').forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          scrub: 0.2
+        },
+        y: '50px',
+        opacity: 0.5
+      })
+    })
   },
   methods: {
     prev() {
@@ -82,7 +99,7 @@ export default {
       this.hasPrev = hasPrev
       this.hasNext = hasNext
     }
-  },
+  }
 }
 </script>
 <style scoped>
