@@ -19,7 +19,11 @@ export default {
   css: ['~/assets/css/fonts.css'],
   plugins: [{ src: '~/plugins/alert', mode: 'client' }],
   components: true,
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+  ],
   build: {},
   tailwindcss: {
     configPath: '~/tailwind.js',
@@ -29,8 +33,8 @@ export default {
     preconnect: true,
     useStylesheet: true,
     families: {
-      'Montserrat': true,
-      'Raleway': true,
-    }
-  }
+      Montserrat: true,
+      Raleway: true,
+    },
+  },
 }

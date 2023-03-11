@@ -24,17 +24,23 @@
     <div
       class="py-10 px-5 md:p-0 md:w-1/2 md:h-screen flex flex-col justify-center md:order-1"
     >
-      <h1 class="font-bold text-3xl md:text-5xl relative z-10 font-serif mb-28" data-gsap="staggered-text">
+      <h1
+        class="font-bold text-3xl md:text-5xl relative z-10 font-serif mb-28"
+        data-gsap="staggered-text"
+      >
         ATLAS Pharmacy
       </h1>
       <div>
-        <span class="font-bold text-3xl opacity-90 text-gray-800">Your Health Partner</span>
+        <span class="font-bold text-3xl opacity-90 text-gray-800"
+          >Your Health Partner</span
+        >
         <yellow-stroke
           class="-z-10 absolute -bottom-16 left-0 w-1/2 md:top-16 md:bottom-0"
         />
       </div>
       <p class="z-20 relative text-xl md:text-xl my-7 md:mt-2 md:mb-5">
-        We help patients understand their medications, so that they can make informed decisions about their health.
+        We help patients understand their medications, so that they can make
+        informed decisions about their health.
       </p>
       <button
         class="font-semibold text-lg md:font-bold md:w-1/3 px-3 py-4 rounded-2xl bg-[#30BEA0] border-2 border-[#30BEA0] text-white opacity-80 hover:opacity-100 hover:-translate-y-[1px] hover:transform hover:shadow-md transition-all"
@@ -60,30 +66,28 @@ export default {
   },
   data() {
     return {
-      quoteModal: false
+      quoteModal: false,
     }
   },
-  mounted () {
-    const myText = new SplitType('[data-gsap="staggered-text"]', { types: 'chars'})
-    gsap.from('[data-slide="inLeft"]',
-      {
-        x: '30px',
-        opacity: .7,
-        duration: 4
-      }
-    )
-    gsap.from('[data-slide="inBottom"]',
-      {
-        y: '-30px',
-        opacity: .7,
-        duration: 4
-      }
-    )
+  mounted() {
+    const myText = new SplitType('[data-gsap="staggered-text"]', {
+      types: 'chars',
+    })
+    gsap.from('[data-slide="inLeft"]', {
+      x: '30px',
+      opacity: 0.7,
+      duration: 4,
+    })
+    gsap.from('[data-slide="inBottom"]', {
+      y: '-30px',
+      opacity: 0.7,
+      duration: 4,
+    })
     gsap.fromTo(
-    myText.chars,
-      { 
+      myText.chars,
+      {
         y: 0,
-        opacity: 0
+        opacity: 0,
       },
       {
         y: 0,
@@ -93,13 +97,13 @@ export default {
         ease: 'power4.out',
       }
     )
-  }
+  },
 }
 </script>
 
 <style scoped>
-  [data-gsap="staggered-text"] {
-    transform: translateY(115px);
-    transition: transform .5s;
+[data-gsap='staggered-text'] {
+  transform: translateY(115px);
+  transition: transform 0.5s;
 }
 </style>
