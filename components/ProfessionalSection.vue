@@ -23,11 +23,9 @@
         attention, care and highly professional service.
       </p>
       <p class="text-lg mt-2">
-        Our Pharmacist has gained additional designations in the field of
-        Diabetes and Smoking Cessation. Whether you are having trouble managing
-        your blood sugar levels or would like to know your options to quit
-        smoking, our Pharmacist is dedicated to ensuring your needs are met.
-        Walk-in or arrange for a one-on-one consultation with our Pharmacist.
+        We understand that healthcare is multifaceted, and so our team of pharmacists analyze health challenges on an individual basis; ensuring that we not just dispense medicines, but also suggest lifestyle changes that could enhance speedy recovery and cure. 
+        So, no matter what your health challenge is, and no matter what causes it, be rest assured that we have an approach which will bring you cure. 
+        Contact us today!
       </p>
       <img
         src="~/assets/doddles/springs.svg"

@@ -2,8 +2,7 @@
   <section class="py-20 px-5 md:py-28 md:px-40 bg-gray-50">
     <h1 class="text-4xl font-serif font-semibold header">What we offer</h1>
     <p class="mt-2 md:w-1/2">
-      At Atlas we make sure our patients receive quality service and expert
-      advice. Here are just a few of the services we provide:
+      At Atlas, we guarantee that our clients receive professional guidance and high-quality care. Listed below are just a few of the services we offer:
     </p>
     <div class="md:flex flex-wrap justify-center gap-5 mt-10">
       <div
@@ -75,13 +74,13 @@
         class="border-box bos h-32 md:h-auto md:w-1/4 mb-5 md:mb-0 bg-gray-100 p-5 rounded-md flex gap-3 items-start border"
       >
         <img
-          src="~/assets/imgs/prescription.svg"
+          src="~/assets/imgs/no-smoking.svg"
           class="w-6 h-auto text-gray-100"
         />
         <div class="">
-          <h2 class="font-semibold text-md mb-3">MEDICATION REVIEW</h2>
+          <h2 class="font-semibold text-md mb-3">SMOKING CESSATION SPECIALIST</h2>
           <p class="">
-            We provide one-on-one FREE Medication Review to all of our patients
+            Learn about your options to quit smoking!
           </p>
         </div>
       </div>
